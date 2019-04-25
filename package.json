@@ -1,24 +1,24 @@
 {
-  "name": "antiendgamespoilers",
+  "name": "antiendgamespoilersbot",
   "version": "1.0.0",
-  "description": "A discord bot for auto-deleting spoilers for Avengers Endgame",
+  "description": "A discord bot to prevent the spoilers of the movie \"Avengers: Endgame\"\u001b[D\u001b[D\u001b[C\u001b\u001b[D\u001b[D\u001b[A\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[Cme\"",
   "main": "index.js",
- "scripts": {
-    "start": "index.js"
-}
-  "author": "SeverePain",
-  "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.4.2",
     "ms": "^2.1.1",
+    "discord.js": "^11.4.2",
     "random-puppy": "^1.1.0",
     "superagent": "^4.1.0"
   },
   "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SeverePain/Anti-Avengers-Endgame-Spoilers-Discord-Bot.git"
   },
+  "author": "SeverePain#0001",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/SeverePain/Anti-Avengers-Endgame-Spoilers-Discord-Bot/issues"
   },
