@@ -25,15 +25,11 @@ fs.readdir("./commands/", (err, files) => {
 //testing webhook
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("Watch Avengers: Endgame in theaters now! || Made by SeverePain#0001", {type: "PLAYING"});
+  bot.user.setActivity("Avengers: Endgame || Made by SeverePain#0001", {type: "WATCHING"});
   bot.guilds.forEach(function(serverlist){
     console.log(serverlist.name + " with id " + serverlist.id + " | Guild owned by ID " + serverlist.ownerID);
     })
-  /*
-const list = bot.guilds.get("567346638193033216"); 
-
-list.members.forEach(member => console.log(member.user.username + " with id " + member.user.id));
- */ 
+ 
 });
 
 bot.on("message", async message => {
@@ -78,6 +74,8 @@ bot.on("message", async message => {
   
   
   
+  
+  
 let blacklisted = ["Rodgers picks up Mjolnir","Captain America picks up Mjolnir","Time travel to the past","Avengers time travel","Thanos dies","thanos disintegrates","Thor kills thanos","Thor decapitates Thanos","Iron man snaps","Stark Snaps","hulk undoes the snap","joins the Guardians","Asguard queen","Asgard Queen","Thor appoints Valkyrie as the queen","Rodger gave his shield","Rodgers gives his shield","Captain America gives his shield","Iron Man Dies", "Tony Stark Dies", "Thanos Dies", "Captain America Weilds Thors Hammer","tony dies","iron man dies","stark dies","iron man funeral","tony stark/iron man dies", "iron man/tony stark dies"]
 
 let foundInText = false;
@@ -92,7 +90,7 @@ message.delete();
  let mutetime = "1d"
  let tomute = message.author
  tomute.addRole(muterole.id)
-message.channel.send('Endgame Spoiler Detected. Message has been removed and user has been muted for 1 day!');
+message.channel.send('Endgame Spoiler Detected. Message has been removed and ' + message.author + ' has been muted for 1 day!');
   let SEmbed = new Discord.RichEmbed()
      .setDescription("~SPOILER FOR ENDGAME~")
      .setColor("#000000")
