@@ -54,11 +54,33 @@ bot.on("message", async message => {
   
   
   
+
+  //Seriously, Endgame spoilers below!
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
   
   //THIS IS YOUR LAST WARNING! SPOILERS BELOW!
+  
+  
+  
+  
+  
+  
   
   
   
@@ -112,12 +134,5 @@ console.log(message.author + " Said Spoiler: " + message.content + " In Guild " 
   
 }); //end of Message Function
 
-bot.on("messageUpdate", function(oldMessage, newMessage){
-
-
-
-
-
-})
 
 bot.login(tokenfile);
