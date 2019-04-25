@@ -4,7 +4,7 @@ const fs = require("fs");
 const ms = require("ms");
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
-
+console.log(process.env.ENDtoken)
 fs.readdir("./commands/", (err, files) => {
 
   if(err) console.log(err);
@@ -131,4 +131,4 @@ console.log(message.author + " Said Spoiler: " + message.content + " In Guild " 
 }
   
 }) //end of Message Function
-bot.login(process.env.ENDtoken)
+bot.login(process.env.ENDtoken);
