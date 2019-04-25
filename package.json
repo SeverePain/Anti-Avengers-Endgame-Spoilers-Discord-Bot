@@ -12,7 +12,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "index.js"
-	"start": "index.js"
+    "start": "index.js"
   },
   "repository": {
     "type": "git",
