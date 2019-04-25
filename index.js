@@ -107,7 +107,7 @@ if (foundInText){
 message.delete();
  let muterole = message.guild.roles.find(`name`, "Muted")
  let mutetime = "1d"
- let tomute = bot.fetchUser(message.author)
+ let tomute = bot.fetchUser(message.author.id)
  tomute.addRole(muterole.id)
 message.channel.send('Endgame Spoiler Detected. Message has been removed and ' + message.author + ' has been muted for 1 day!');
   let SEmbed = new Discord.RichEmbed()
