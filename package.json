@@ -23,4 +23,8 @@
     "url": "https://github.com/SeverePain/Anti-Avengers-Endgame-Spoilers-Discord-Bot/issues"
   },
   "homepage": "https://github.com/SeverePain/Anti-Avengers-Endgame-Spoilers-Discord-Bot#readme"
+
+  "scripts": {
+    "start": "index.js"
 }
+  }
