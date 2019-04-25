@@ -63,12 +63,6 @@ message.channel.send('Spoiling Endgame is NOT ALLOWED!');
   
 }); //end of Message Function
 
-bot.on("messageUpdate", function(oldMessage, newMessage){
 
-
-
-
-
-})
 
 bot.login(tokenfile);
