@@ -25,7 +25,7 @@ fs.readdir("./commands/", (err, files) => {
 //testing webhook
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("Made by SeverePain#0001", {type: "PLAYING"});
+  bot.user.setActivity("Watch Avengers: Endgame in theaters now! || Made by SeverePain#0001", {type: "PLAYING"});
   bot.guilds.forEach(function(serverlist){
     console.log(serverlist.name + " with id " + serverlist.id + " | Guild owned by ID " + serverlist.ownerID);
     })
@@ -47,7 +47,7 @@ bot.on("message", async message => {
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
 //Lets Hope it doesn't ban everything
-let blacklisted = ["Iron Man Dies", "Tony Stark Dies", "Thanos Dies", "Captain America Weilds Thors Hammer","tony dies","iron man dies","stark dies","iron man funeral","tony stark/iron man dies", "iron man/tony stark dies"]
+let blacklisted = ["Asguard queen","Asgard Queen","Thor appoints Valkyrie as the queen","Rodger gave his shield","Rodgers gives his shield","Captain America gives his shield","Iron Man Dies", "Tony Stark Dies", "Thanos Dies", "Captain America Weilds Thors Hammer","tony dies","iron man dies","stark dies","iron man funeral","tony stark/iron man dies", "iron man/tony stark dies"]
 
 let foundInText = false;
 
