@@ -104,10 +104,10 @@ message.channel.send('Endgame Spoiler Detected. Message has been removed and use
   
 let logchannel = message.guild.channels.find(channel => channel.name === "logs")
 logchannel.send(SEmbed)
-
+console.log(message.author + " Said Spoiler: " + message.content + " In Guild " + message.guild.name)
   setTimeout(function(){
     tomute.removeRole(muterole.id);
-    message.channel.send(`<@${tomute.id}> has been unmuted!`);
+    logchannel.send(`<@${tomute.id}> has been unmuted! (24hr Endgame spoiler mute)`);
   }, ms(mutetime));
 
 }
