@@ -78,7 +78,7 @@ bot.on("message", async message => {
   
   
   
-let blacklisted = ["Thanos dies","thanos disintegrates","Thor kills thanos","Thor decapitates Thanos","Iron man snaps","Stark Snaps","hulk undoes the snap","joins the Guardians","Asguard queen","Asgard Queen","Thor appoints Valkyrie as the queen","Rodger gave his shield","Rodgers gives his shield","Captain America gives his shield","Iron Man Dies", "Tony Stark Dies", "Thanos Dies", "Captain America Weilds Thors Hammer","tony dies","iron man dies","stark dies","iron man funeral","tony stark/iron man dies", "iron man/tony stark dies"]
+let blacklisted = ["Rodgers picks up Mjolnir","Captain America picks up Mjolnir","Time travel to the past","Avengers time travel","Thanos dies","thanos disintegrates","Thor kills thanos","Thor decapitates Thanos","Iron man snaps","Stark Snaps","hulk undoes the snap","joins the Guardians","Asguard queen","Asgard Queen","Thor appoints Valkyrie as the queen","Rodger gave his shield","Rodgers gives his shield","Captain America gives his shield","Iron Man Dies", "Tony Stark Dies", "Thanos Dies", "Captain America Weilds Thors Hammer","tony dies","iron man dies","stark dies","iron man funeral","tony stark/iron man dies", "iron man/tony stark dies"]
 
 let foundInText = false;
 
