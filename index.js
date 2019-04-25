@@ -3,6 +3,7 @@ const tokenfile = process.env.ENDtoken
 const Discord = require("discord.js");
 const superagent = require("superagent");
 const fs = require("fs");
+const ms = require("ms");
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
 
@@ -56,8 +57,27 @@ let foundInText = false;
 
 if (foundInText){
 message.delete();
+ let muterole = message.guild.roles.find(`name`, "Muted")
+ let mutetime = "1d"
+ let tomute = message.author
+ tomute.addRole(muterole.id)
+message.channel.send('Endgame Spoiler Detected. Message has been removed and user has been muted for 1 day!');
+  let SEmbed = new Discord.RichEmbed()
+     .setDescription("~SPOILER FOR ENDGAME~")
+     .setColor("#000000")
+     .addField("User", ` ${message.author}with ID ${message.author.id}`)
+     .addField("Said In", message.channel)
+     .addField("Time", message.createdAt)
+     .addField("Said in guild", message.guild.name)
+     .addField("Spoiler Said", '|| ' + message.content + ' ||');
+  
+let logchannel = message.guild.channels.find(channel => channel.name === "logs")
+logchannel.send(SEmbed)
 
-message.channel.send('Spoiling Endgame is NOT ALLOWED!');
+  setTimeout(function(){
+    tomute.removeRole(muterole.id);
+    message.channel.send(`<@${tomute.id}> has been unmuted!`);
+  }, ms(mutetime));
 
 }
   
