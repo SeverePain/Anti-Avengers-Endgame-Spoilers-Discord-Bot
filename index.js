@@ -1,7 +1,6 @@
 const botconfig = require("./botconfig.json");
 const tokenfile = process.env.ENDtoken
 const Discord = require("discord.js");
-const superagent = require("superagent");
 const fs = require("fs");
 const ms = require("ms");
 const bot = new Discord.Client();

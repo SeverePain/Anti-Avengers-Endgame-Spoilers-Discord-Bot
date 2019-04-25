@@ -1,13 +1,26 @@
 {
-  "name": "Test",
-  "description": "Test",
-  "version": "0.0.0",
+  "name": "antiendgamespoilersbot",
+  "version": "1.0.0",
+  "description": "A simple discord bot for preventing the spoilers of Avengers: Endgame! The incidents are all logged in the #logs channel of your server!",
   "main": "index.js",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "ms": "^2.1.1",
+    "random-puppy": "^1.1.0",
+    "superagent": "^4.1.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "start": "node index.js"
   },
-  "dependencies": {
-    "discord.js": "11.1.0",
-    "request": "2.81.0"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeverePain/Anti-Avengers-Endgame-Spoilers-Discord-Bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SeverePain/Anti-Avengers-Endgame-Spoilers-Discord-Bot/issues"
+  },
+  "homepage": "https://github.com/SeverePain/Anti-Avengers-Endgame-Spoilers-Discord-Bot#readme"
 }
