@@ -3,6 +3,7 @@ const tokenfile = process.env.ENDtoken
 const Discord = require("discord.js");
 const superagent = require("superagent");
 const fs = require("fs");
+const ms = require("ms");
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
 
@@ -24,15 +25,11 @@ fs.readdir("./commands/", (err, files) => {
 //testing webhook
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("Made by SeverePain#0001", {type: "PLAYING"});
+  bot.user.setActivity("Avengers: Endgame || Made by SeverePain#0001", {type: "WATCHING"});
   bot.guilds.forEach(function(serverlist){
     console.log(serverlist.name + " with id " + serverlist.id + " | Guild owned by ID " + serverlist.ownerID);
     })
-  /*
-const list = bot.guilds.get("567346638193033216"); 
-
-list.members.forEach(member => console.log(member.user.username + " with id " + member.user.id));
- */ 
+ 
 });
 
 bot.on("message", async message => {
@@ -45,8 +42,63 @@ bot.on("message", async message => {
   let args = messageArray.slice(1);
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
-//Lets Hope it doesn't ban everything
-let blacklisted = ["Iron Man Dies", "Tony Stark Dies", "Thanos Dies", "Captain America Weilds Thors Hammer","tony dies","iron man dies","stark dies","iron man funeral","tony stark/iron man dies", "iron man/tony stark dies"]
+//WARNING! SPOILERS BELOW!!!!
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  //Seriously, Endgame spoilers below!
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  //THIS IS YOUR LAST WARNING! SPOILERS BELOW!
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+let blacklisted = ["Rodgers picks up Mjolnir","Captain America picks up Mjolnir","Time travel to the past","Avengers time travel","Thanos dies","thanos disintegrates","Thor kills thanos","Thor decapitates Thanos","Iron man snaps","Stark Snaps","hulk undoes the snap","joins the Guardians","Asguard queen","Asgard Queen","Thor appoints Valkyrie as the queen","Rodger gave his shield","Rodgers gives his shield","Captain America gives his shield","Iron Man Dies", "Tony Stark Dies", "Thanos Dies", "Captain America Weilds Thors Hammer","tony dies","iron man dies","stark dies","iron man funeral","tony stark/iron man dies", "iron man/tony stark dies"]
 
 let foundInText = false;
 
@@ -56,13 +108,31 @@ let foundInText = false;
 
 if (foundInText){
 message.delete();
-
-message.channel.send('Spoiling Endgame is NOT ALLOWED!');
+ let muterole = message.guild.roles.find(`name`, "Muted")
+ let mutetime = "1d"
+ let tomute = message.author
+ tomute.addRole(muterole.id)
+message.channel.send('Endgame Spoiler Detected. Message has been removed and ' + message.author + ' has been muted for 1 day!');
+  let SEmbed = new Discord.RichEmbed()
+     .setDescription("~SPOILER FOR ENDGAME~")
+     .setColor("#000000")
+     .addField("User", ` ${message.author}with ID ${message.author.id}`)
+     .addField("Said In", message.channel)
+     .addField("Time", message.createdAt)
+     .addField("Said in guild", message.guild.name)
+     .addField("Spoiler Said", '|| ' + message.content + ' ||');
+  
+let logchannel = message.guild.channels.find(channel => channel.name === "logs")
+logchannel.send(SEmbed)
+console.log(message.author + " Said Spoiler: " + message.content + " In Guild " + message.guild.name)
+  setTimeout(function(){
+    tomute.removeRole(muterole.id);
+    logchannel.send(`<@${tomute.id}> has been unmuted! (24hr Endgame spoiler mute)`);
+  }, ms(mutetime));
 
 }
   
 }); //end of Message Function
-
 
 
 bot.login(tokenfile);
