@@ -1,8 +1,7 @@
 const botconfig = require("./botconfig.json");
-var tokenfile = process.env.ENDtoken
 const Discord = require("discord.js");
 const fs = require("fs");
-const ms = require("ms");
+const ms = require("ms");x
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
 
@@ -132,6 +131,4 @@ console.log(message.author + " Said Spoiler: " + message.content + " In Guild " 
 }
   
 }) //end of Message Function
-
-
-bot.login(tokenfile)
+bot.login(process.env.ENDtoken)
