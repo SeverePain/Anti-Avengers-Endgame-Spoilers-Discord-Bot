@@ -124,6 +124,9 @@ message.channel.send('Endgame Spoiler Detected. Message has been removed and ' +
      .addField("Spoiler Said", '|| ' + message.content + ' ||');
   
 let logchannel = message.guild.channels.find(channel => channel.name === "logs")
+if(!logchannel){
+  let logchannel = message.guild.channels.find(channel => channel.name === "logging")
+}
 logchannel.send(SEmbed)
 console.log(message.author + " Said Spoiler: " + message.content + " In Guild " + message.guild.name)
   setTimeout(function(){
