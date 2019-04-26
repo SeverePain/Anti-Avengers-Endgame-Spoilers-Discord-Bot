@@ -108,7 +108,11 @@ message.delete();
  let muterole = message.guild.roles.find(`name`, "Muted")
  let mutetime = "1d"
  let tomute = message.member
- tomute.addRole(muterole.id)
+ tomute.addRole(muterole.id).catch(err => {
+  message.reply("I either do not have permission to assign the 'Muted' role or this role doesn't exist!")
+  console.log(err)
+  return;
+})
 message.channel.send('Endgame Spoiler Detected. Message has been removed and ' + message.author + ' has been muted for 1 day!');
   let SEmbed = new Discord.RichEmbed()
      .setDescription("~SPOILER FOR ENDGAME~")
