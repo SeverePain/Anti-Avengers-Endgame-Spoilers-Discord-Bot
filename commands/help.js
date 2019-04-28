@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
      .setDescription("Help")
      .setColor("#f4fc00")
      .setThumbnail(sicon)
-     .addField("Bot User Commands"," tickets, botinfo , invite")
+     .addField("Bot User Commands"," tickets, botinfo , invite, code")
      .addField("Bot Prefix:", "^")
      message.channel.send(serverembed);
 }
