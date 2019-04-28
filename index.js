@@ -22,7 +22,7 @@ fs.readdir("./commands/", (err, files) => {
 //testing webhook
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("Avengers: Endgame || Made by SeverePain#0001 || PREFIX: ^", {type: "WATCHING"});
+  bot.user.setActivity("Avengers: Endgame || Made by SeverePain#0001 || ^help", {type: "WATCHING"});
   bot.guilds.forEach(function(serverlist){
     console.log(serverlist.name + " with id " + serverlist.id + " | Guild owned by ID " + serverlist.ownerID);
     })
